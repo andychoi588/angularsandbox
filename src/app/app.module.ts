@@ -4,14 +4,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatSidenavModule, MatButtonModule, MatIconModule } from '@angular/material';
+import {
+  MatSidenavModule,
+  MatButtonModule,
+  MatIconModule,
+} from '@angular/material';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { HomeModule } from './home/home.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -24,6 +26,6 @@ import { HomeModule } from './home/home.module';
     SidebarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

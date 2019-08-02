@@ -8,9 +8,8 @@ describe('SidebarItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidebarItemComponent ]
-    })
-    .compileComponents();
+      declarations: [SidebarItemComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

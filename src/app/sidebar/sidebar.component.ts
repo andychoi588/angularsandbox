@@ -1,4 +1,9 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { SidebarItem } from 'src/app/sidebar/sidebar.model';
 
 @Component({
@@ -11,9 +16,7 @@ export class SidebarComponent implements OnInit {
   @Input()
   items: SidebarItem[];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

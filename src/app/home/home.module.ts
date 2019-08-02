@@ -5,12 +5,7 @@ import { MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [
-    CommonModule,
-    MatIconModule
-  ],
-  exports: [
-    HomeComponent
-  ]
+  imports: [CommonModule, MatIconModule],
+  exports: [HomeComponent],
 })
-export class HomeModule { }
+export class HomeModule {}
