@@ -14,7 +14,7 @@ import { SidebarItem } from 'src/app/sidebar/sidebar.model';
 })
 export class SidebarComponent implements OnInit {
   @Input()
-  items: SidebarItem[];
+  items: SidebarItem[] = [];
 
   constructor() {}
 

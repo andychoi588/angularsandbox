@@ -8,7 +8,7 @@ import { SidebarItem } from 'src/app/sidebar/sidebar.model';
 })
 export class SidebarItemComponent implements OnInit {
   @Input()
-  item: SidebarItem;
+  item: SidebarItem = { title: 'Undefined', route: '' };
 
   constructor() {}
 

@@ -6,8 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {
   MatSidenavModule,
-  MatButtonModule,
-  MatIconModule,
 } from '@angular/material';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { HomeModule } from './home/home.module';
@@ -18,8 +16,6 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatButtonModule,
-    MatIconModule,
 
     AppRoutingModule,
     HomeModule,
