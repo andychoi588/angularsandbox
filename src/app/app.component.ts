@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { sidebarConfig } from '../configs/sidebar.config';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-sandbox';
+  sidebarConfiguration = sidebarConfig;
 }
