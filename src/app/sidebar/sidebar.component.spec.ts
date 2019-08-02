@@ -5,6 +5,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
 import { SidebarItemComponent } from './sidebar-item/sidebar-item.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { By } from '@angular/platform-browser';
+import { DEFAULT_SIDEBARITEM } from './sidebar.const';
+import { ChangeDetectionStrategy } from '@angular/core';
 
 describe('SidebarComponent', () => {
   let component: SidebarComponent;
@@ -14,7 +17,11 @@ describe('SidebarComponent', () => {
     TestBed.configureTestingModule({
       imports: [NoopAnimationsModule, MatListModule, RouterTestingModule],
       declarations: [SidebarComponent, SidebarItemComponent],
-    }).compileComponents();
+    })
+      .overrideComponent(SidebarComponent, {
+        set: { changeDetection: ChangeDetectionStrategy.Default },
+      })
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -24,6 +31,25 @@ describe('SidebarComponent', () => {
   });
 
   it('should create', () => {
+    const sidebarItems = fixture.debugElement.queryAll(
+      By.css('[data-testid="sidebar-item"]')
+    );
     expect(component).toBeTruthy();
+    expect(sidebarItems).toEqual([]);
+  });
+
+  // tslint:disable-next-line: max-line-length
+  it('should have correct number of items when items passed in as @Input', () => {
+    component.items = [
+      DEFAULT_SIDEBARITEM,
+      DEFAULT_SIDEBARITEM,
+      DEFAULT_SIDEBARITEM,
+    ];
+    fixture.detectChanges();
+
+    const sidebarItems = fixture.debugElement.queryAll(
+      By.css('[data-testid="sidebar-item"]')
+    );
+    expect(sidebarItems.length).toEqual(3);
   });
 });

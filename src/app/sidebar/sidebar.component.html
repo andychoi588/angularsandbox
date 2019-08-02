@@ -1,4 +1,8 @@
 <mat-nav-list class="sidebar-list">
-  <app-sidebar-item *ngFor="let item of items" [item]="item">
+  <app-sidebar-item
+    *ngFor="let item of items"
+    data-testid="sidebar-item"
+    [item]="item"
+  >
   </app-sidebar-item>
 </mat-nav-list>
