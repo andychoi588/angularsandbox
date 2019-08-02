@@ -5,8 +5,4 @@ export const sidebarConfig: SidebarItem[] = [
     title: 'Home',
     route: 'home',
   },
-  {
-    title: 'CSS Grid',
-    route: 'css-grid',
-  },
 ];
